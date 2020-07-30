@@ -1,0 +1,154 @@
+  .docBody {
+    display: grid;
+    grid-template-columns: repeat(120, 13px);
+    grid-template-rows: repeat(40, 13px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+    /* #side-bar { 
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      grid-area: 20 / 5 / 90 / 10} */
+
+  .grand-div {
+    grid-area: 18 / 15 / 36 / 32;
+  }  
+ 
+  .update-delete { 
+    display: inline-block ;
+    grid-area: 37 / 15 / 40 / 31; 
+    margin: 5px;
+    margin-right: 9px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background-color: #303030 ;
+    color: white;}
+
+
+
+  .submit-div { 
+    grid-area: 37 / 15 / 40 / 31; 
+    margin: 5px;
+    margin-right: 9px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background-color: #303030 ;
+    color: white;}
+  .drop-down-div {
+    position: fixed;
+  }
+  .menu-div{
+    margin: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    background-color: #303030 ;
+    color: white;
+  }
+
+  
+  .main-div {
+
+    display: grid;
+    grid-template-columns: repeat(120, 13px);
+    grid-template-rows: repeat(100, 13px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: fixed;
+    margin-left: 350px;
+    margin-top: 250px;
+  }
+  #head { grid-area: 1 / 10 / 13 / 22; }
+  #body { grid-area: 12 / 9 / 24 / 21; }
+  #lArm { grid-area: 12 / 5 / 22 / 11; }
+  #rArm { grid-area: 12 / 19 / 22 / 25; }
+  #legs { grid-area: 22 / 7 / 34 / 23; }
+  #name { grid-area:  34 / 13/ 37 / 20; }
+ 
+
+  .parent-div {
+    display: grid;
+    grid-template-columns: repeat(50, 1px);
+    grid-template-rows: repeat(75, 1px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    }
+    
+    .head { grid-area: 1 / 16 / 20 / 37; }
+    .body { grid-area: 20 / 14 / 40 / 33; }
+    .lArm { grid-area: 20 / 6 / 40 / 16; }
+    .rArm { grid-area: 20 / 32 / 40 / 45; }
+    .legs { grid-area: 38 / 12 / 50 / 29; }
+    .name { grid-area:  35 / center/ 65 / 10; }
+
+    #logo {
+      position: fixed;
+      margin-top: 60px;
+      margin-left: 200px;
+
+    }
+
+
+    
+    #side-bar {
+      overflow: auto;
+      height: 80%;
+      width: 110px;
+      position: fixed;
+
+      background-color: rgb(0, 0, 0);
+      overflow-x: hidden;
+      padding-top: 150px;
+      padding-left: 30px;
+    }
+    
+    #side-bar div {
+      
+      text-decoration: none;
+      color: #ffffff;
+    }
+    
+    #side-bar div:hover {
+      color: #f1f1f1;
+    }
+    
+    ul {
+      margin-top: 0px;
+      grid-area: 1/ 1 / 10/ 80;
+      max-height: 40px;
+      list-style-type: none;
+      overflow: hidden;
+      background-color: rgb(0, 0, 0);
+      padding-left: 300px;
+      position: fixed;
+      width: 100%;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: #4CAF50;
+    }
