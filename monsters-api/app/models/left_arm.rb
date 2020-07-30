@@ -1,0 +1,2 @@
+class LeftArm < ApplicationRecord
+end
