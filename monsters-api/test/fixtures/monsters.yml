@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  left_arm: one
+  right_arm: one
+  body: one
+  legs: one
+  head: one
+  user: one
+
+two:
+  name: MyString
+  left_arm: two
+  right_arm: two
+  body: two
+  legs: two
+  head: two
+  user: two
