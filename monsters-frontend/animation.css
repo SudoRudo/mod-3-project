@@ -58,3 +58,9 @@
     animation-name: legs;
     animation-duration: 0.5s;
   }
+
+
+  @keyframes walk {
+    20% { transform: rotate(10deg);}
+    50% { transform: rotate(-10deg);}
+  }

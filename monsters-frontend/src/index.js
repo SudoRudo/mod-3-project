@@ -66,6 +66,23 @@ function renderSideBar(monster){
     })
 }
 
+document.addEventListener("click", e => {
+    if (e.target.matches('.random')){
+        const headselect = document.querySelector('#head-select')
+        const bodyselect = document.querySelector('#body-select')
+        const rightarmselect = document.querySelector('#right-arm-select')
+        const leftarmselect = document.querySelector('#left-arm-select')
+        const legsselect = document.querySelector('#legs-select')
+
+        headselect.value = Math.floor((Math.random() * 6) + 1).toString()
+        bodyselect.value = Math.floor((Math.random() * 5) + 1).toString()
+        rightarmselect.value = Math.floor((Math.random() * 6) + 1).toString()
+        leftarmselect.value = Math.floor((Math.random() * 6) + 1).toString()
+        legsselect.value = Math.floor((Math.random() * 5) + 1).toString()
+
+
+    }
+})
 
 
 function renderMonster(monster){
@@ -77,6 +94,7 @@ function renderMonster(monster){
     const rArm = document.createElement('div')
     const legs = document.createElement('div')
     const name = document.createElement('div')
+    const hp = document.createElement('div')
 
     
     mainDiv.id = monster.id
@@ -88,6 +106,7 @@ function renderMonster(monster){
     mainDiv.appendChild(head)
     mainDiv.appendChild(lArm)
     mainDiv.appendChild(name)
+    mainDiv.appendChild(hp)
 
     head.id = "head" 
     lArm.id = "lArm"
@@ -95,6 +114,7 @@ function renderMonster(monster){
     legs.id = "legs"
     body.id = "body"
     name.id = "name"
+    hp.id = "hp"
 
     head.innerHTML = `<img src="${monster.head.url}" />`
     lArm.innerHTML = `<img src="${monster.left_arm.url}" />`
@@ -102,6 +122,9 @@ function renderMonster(monster){
     legs.innerHTML = `<img src="${monster.leg.url}" />`
     body.innerHTML = `<img src="${monster.body.url}" />`
     name.innerHTML = `<h2>${monster.name.toUpperCase()}</h2> `
+    // hp.innerHTML = `<h3>HP: ${monster.hp} </h3> `
+
+    console.log(monster.hp)
 
     
     
@@ -109,7 +132,7 @@ function renderMonster(monster){
 function onRefresh(monster){
     renderMonster(monster);
     autoFill(monster);
-    let elem = document.querySelector('.submit-div')
+    let elem = document.querySelector('.drop-down-div')
     elem.parentNode.removeChild(elem);
     updateDelete();
 }
@@ -291,7 +314,29 @@ const deleteMonster = () => {
     })
 } 
 
+function attack(){
+    document.addEventListener("click", e => {
+        if (e.target.matches('#head')){
+            const hp = parseInt(document.querySelector('#hp').innerText, 10)
+            monId = mainDiv.id
 
+            
+            fetch(`http://localhost:3000/api/monsters/${monId}`, {
+                method: "PATCH",
+                headers: {
+                    "content-type": "application/json",
+                    "accept": "application/json"
+                },
+                body: JSON.stringify({hp: hp})
+            })
+            document.querySelector('#hp').innerText = (parseInt(document.querySelector('#hp').innerText, 10) - 5).toString()
+            
+     
+        }
+    })
+}
+
+attack()
 newMonsterClick()
 fetchMonsters()
 saveMonster()

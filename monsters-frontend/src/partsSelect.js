@@ -194,7 +194,7 @@ function nameSelect(){
     dropDownDiv.appendChild(nameDiv)
     nameDiv.innerHTML = `
     <label for="name">Name Your Little Guy</label><br>
-    <textarea id="name" name="name" rows="1" ></textarea>`
+    <textarea id="name-select" name="name" rows="1" ></textarea>`
 }
 
 function submitButton(){

@@ -2,6 +2,7 @@ class CreateMonsters < ActiveRecord::Migration[6.0]
   def change
     create_table :monsters do |t|
       t.string :name
+      t.string :hp
       t.references :left_arm, null: false, foreign_key: true
       t.references :right_arm, null: false, foreign_key: true
       t.references :body, null: false, foreign_key: true

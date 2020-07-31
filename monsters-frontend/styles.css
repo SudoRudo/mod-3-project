@@ -1,9 +1,14 @@
-  body {
+  /* body {
     height: 781px;
     background-position: fixed;
     background-color: #cccccc;
     background-image: linear-gradient(rgb(255, 78, 78), rgb(255, 249, 158));
-  }
+  } */
+
+  body{
+    background-image: url("https://i.imgur.com/ewyBHdZ.jpg"); 
+    background-color: red;
+}
   .docBody {
     
     display: grid;
@@ -77,7 +82,12 @@
   #lArm { grid-area: 12 / 10 / 22 / 16; }
   #rArm { grid-area: 12 / 24 / 22 / 30; }
   #legs { grid-area: 22 / 12 / 34 / 28; }
-  #name { grid-area: 33 / 16 / 37 / 25; }
+  #name { 
+    grid-area: 33 / 16 / 37 / 25;
+    color: floralwhite;
+    text-shadow: 2px 2px #000000;
+   }
+  #hp { grid-area: 36 / 16 / 37 / 25; }
  
 
   .parent-div {

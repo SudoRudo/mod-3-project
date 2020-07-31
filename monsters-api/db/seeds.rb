@@ -55,7 +55,9 @@ Leg.create(name: "Sasquatch", url: "https://i.imgur.com/bfQMSqV.png")
 User.create(name: "Rudy")
 
 
-Monster.create(name: "Donovan", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
-Monster.create(name: "Henry", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
-Monster.create(name: "Sally", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
-Monster.create(name: "Killer", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
+Monster.create(name: "Donovan", hp: "76", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
+Monster.create(name: "Henry", hp: "89", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
+Monster.create(name: "Sally", hp: "10", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
+Monster.create(name: "Killer", hp: "32", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
+Monster.create(name: "Plonk", hp: "53", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)
+Monster.create(name: "Darude", hp: "96", left_arm_id: rand(3..6), right_arm_id: rand(3..6), body_id: rand(3..5), leg_id: rand(3..5), head_id: rand(3..6), user_id: 1)

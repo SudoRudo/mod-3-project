@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2020_07_27_231915) do
 
   create_table "monsters", force: :cascade do |t|
     t.string "name"
+    t.string "hp"
     t.integer "left_arm_id", null: false
     t.integer "right_arm_id", null: false
     t.integer "body_id", null: false
