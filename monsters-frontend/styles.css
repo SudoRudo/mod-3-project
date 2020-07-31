@@ -1,4 +1,11 @@
+  body {
+    height: 781px;
+    background-position: fixed;
+    background-color: #cccccc;
+    background-image: linear-gradient(rgb(255, 78, 78), rgb(255, 249, 158));
+  }
   .docBody {
+    
     display: grid;
     grid-template-columns: repeat(120, 13px);
     grid-template-rows: repeat(40, 13px);
@@ -61,14 +68,14 @@
     grid-row-gap: 0px;
     position: fixed;
     margin-left: 350px;
-    margin-top: 250px;
+    margin-top: 220px;
   }
-  #head { grid-area: 1 / 10 / 13 / 22; }
-  #body { grid-area: 12 / 9 / 24 / 21; }
-  #lArm { grid-area: 12 / 5 / 22 / 11; }
-  #rArm { grid-area: 12 / 19 / 22 / 25; }
-  #legs { grid-area: 22 / 7 / 34 / 23; }
-  #name { grid-area:  34 / 13/ 37 / 20; }
+  #head { grid-area: 2 / 15 / 14 / 27; }
+  #body { grid-area: 12 / 14 / 24 / 26; }
+  #lArm { grid-area: 12 / 10 / 22 / 16; }
+  #rArm { grid-area: 12 / 24 / 22 / 30; }
+  #legs { grid-area: 22 / 12 / 34 / 28; }
+  #name { grid-area: 33 / 16 / 37 / 25; }
  
 
   .parent-div {

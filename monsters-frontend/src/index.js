@@ -62,6 +62,8 @@ function renderSideBar(monster){
     })
 }
 
+
+
 function renderMonster(monster){
     mainDiv.innerHTML=""
 

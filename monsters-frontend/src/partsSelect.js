@@ -209,6 +209,10 @@ function updateDelete(){
     updateDeleteDiv.className = "update-delete"
     docBody.append(updateDeleteDiv)
 
+    // const editSpan = document.createElement('span')
+    // updateDeleteDiv.append(editSpan)
+    // editSpan.innerHTML = `<button type="button" id="edit">Edit Monster</button><br>`
+
     const updateSpan = document.createElement('span')
     updateDeleteDiv.append(updateSpan)
     updateSpan.innerHTML = `<button type="button" id="update">Update!</button> || `
@@ -219,16 +223,15 @@ function updateDelete(){
     deleteSpan.innerHTML = `<button type="button" id="delete">Delete Monster</button>`
 
 }
-
+const formGen = () => {
 headSelect()
 bodySelect()
 legSelect()
 rightArmSelect()
 leftArmSelect()
 nameSelect()
+}
 
 
 
-document.addEventListener('DOMContentLoaded', ()=>{
-
-})
+formGen()

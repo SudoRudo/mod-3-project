@@ -1,0 +1,60 @@
+
+
+@keyframes head { 
+    10% { transform: rotate(-20deg);}
+    20% { transform: rotate(20deg);}
+    30% { transform: rotate(-18deg);}
+    40% { transform: rotate(18deg);}
+    50% { transform: rotate(-14deg);}
+    60% { transform: rotate(14deg);}
+    /* 70% { transform: rotate(-10deg);}
+    80% { transform: rotate(10deg);} */
+  }
+  @keyframes legs {
+    0% {  transform: scaleY(0.2);  transform: scaleX(0.2); }  
+    20% { transform: rotate(-20deg);}
+    50% { transform: rotate(20deg);}
+  }
+    @keyframes leftArm {
+    0% { transform: rotate(40deg);}  
+    20% { transform: rotate(-20deg);}
+    50% { transform: rotate(20deg);}
+  }
+
+  @keyframes rightArm {
+    0% { transform: rotate(-40deg);}  
+    20% { transform: rotate(20deg);}
+    50% { transform: rotate(-20deg);}
+
+  }
+
+  @keyframes body {
+  0% { transform: rotate(180deg);}  
+  /* 40% { transform: rotate(90deg);}
+  60% { transform: rotate(40deg);} */
+  }
+
+  #head {
+    animation-name: head;
+    animation-duration: .5s;
+  }
+
+  #lArm {
+    animation-name: leftArm;
+    animation-duration: .7s;
+  }
+
+  #rArm {
+    animation-name: rightArm;
+    animation-duration: .5s;
+  }
+
+  #body {
+    animation-name: body;
+    animation-duration: 0.5s;
+  }
+
+  #legs {
+    animation-name: legs;
+    animation-duration: 0.5s;
+  }
