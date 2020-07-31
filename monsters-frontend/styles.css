@@ -20,7 +20,9 @@
   .grand-div {
     grid-area: 18 / 15 / 36 / 32;
   }  
- 
+  #new-monster{
+    margin-left: -10px;
+  }
   .update-delete { 
     display: inline-block ;
     grid-area: 37 / 15 / 40 / 31; 

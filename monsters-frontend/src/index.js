@@ -11,6 +11,10 @@ function sideBarTitle(){
     const sideTitle = document.createElement('div')
     sideTitle.innerHTML = `<h3>Monsters</h3>`
     sideBar.appendChild(sideTitle)
+
+    const newMonsterDiv = document.createElement('div')
+    sideBar.append(newMonsterDiv)
+    newMonsterDiv.innerHTML = `<button type="button" id="new-monster">New Monster!</button><br><br><br><br>`
 }
 
 function renderSideBar(monster){
@@ -102,13 +106,67 @@ function renderMonster(monster){
     
     
 }
+function onRefresh(monster){
+    renderMonster(monster);
+    autoFill(monster);
+    let elem = document.querySelector('.submit-div')
+    elem.parentNode.removeChild(elem);
+    updateDelete();
+}
+
+function newMonster(){
+    mainDiv.innerHTML=""
+
+    const head = document.createElement('div')
+    const body = document.createElement('div')
+    const lArm = document.createElement('div')
+    const rArm = document.createElement('div')
+    const legs = document.createElement('div')
+    const name = document.createElement('div')
+    
+
+    mainDiv.appendChild(legs)
+    mainDiv.appendChild(rArm)
+    mainDiv.appendChild(body)
+    mainDiv.appendChild(head)
+    mainDiv.appendChild(lArm)
+    mainDiv.appendChild(name)
+
+    head.id = "head" 
+    lArm.id = "lArm"
+    rArm.id = "rArm"
+    legs.id = "legs"
+    body.id = "body"
+    name.id = "name"
+
+    head.innerHTML = `<img src="https://i.imgur.com/saLijLa.png" />`
+    lArm.innerHTML = `<img src="https://i.imgur.com/efc1OYI.png" />`
+    rArm.innerHTML = `<img src="https://i.imgur.com/oq9Uq6s.png" />`
+    legs.innerHTML = `<img src="https://i.imgur.com/i7aPPey.png" />`
+    body.innerHTML = `<img src="https://i.imgur.com/cLPD1Rl.png" />`
+    name.innerHTML = `<h2>New Guy</h2> `
+
+    let elem = document.querySelector('.update-delete')
+    elem.parentNode.removeChild(elem);
+    submitButton()
+    
+    
+}
 
 const fetchMonsters=()=>{
     fetch(url)
     .then(resp => resp.json())
     .then(collection => {
-        renderMonsters(collection);
         submitButton()
+        renderMonsters(collection);
+    })
+}
+
+const fetchMonsters2=()=>{
+    fetch(url)
+    .then(resp => resp.json())
+    .then(collection => {
+        renderMonsters2(collection);
     })
 }
 
@@ -116,8 +174,22 @@ const renderMonsters = monsterObjectArray =>{
     monsterObjectArray.forEach(monsterObject =>{
         renderSideBar(monsterObject)
     })
-    renderMonster(monsterObjectArray[0])
+    onRefresh(monsterObjectArray[0])
 }
+
+const renderMonsters2 = monsterObjectArray =>{
+    monsterObjectArray.forEach(monsterObject =>{
+        renderSideBar(monsterObject)
+    })
+}
+
+const newMonsterClick = () =>{
+    document.addEventListener("click", e => {
+        if (e.target.matches("#new-monster")){
+            newMonster();
+        }
+    })
+} 
 
 const saveMonster = () =>{
     document.addEventListener("click", e => {
@@ -143,8 +215,9 @@ const saveMonster = () =>{
             .then(response => response.json())
             .then( () =>{
                 sideBar.innerHTML = "";
-                fetchMonsters();
+                fetchMonsters2();
                 sideBarTitle()
+                updateDelete()
             })
      
         }
@@ -163,6 +236,7 @@ function autoFill(monster){
 const updateMonster = () =>{
     document.addEventListener("click", e => {
         if (e.target.matches('#update')){
+            
             
             const monId = parseInt(mainDiv.id, 10)
 
@@ -187,8 +261,9 @@ const updateMonster = () =>{
             .then(response => response.json())
             .then( () =>{
                 sideBar.innerHTML = "";
-                fetchMonsters();
-                sideBarTitle()
+                fetchMonsters2();
+                sideBarTitle();
+                document.querySelector('h2').innerText = document.querySelector('textarea').value.toUpperCase();
             })
      
         }
@@ -217,6 +292,7 @@ const deleteMonster = () => {
 } 
 
 
+newMonsterClick()
 fetchMonsters()
 saveMonster()
 updateMonster()
