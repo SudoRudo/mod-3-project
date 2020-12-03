@@ -26,7 +26,7 @@ LeftArm.create(name: "Green", url: "https://i.imgur.com/efc1OYI.png")
 LeftArm.create(name: "Red", url: "https://i.imgur.com/ETU3w6C.png")
 LeftArm.create(name: "Tentacle", url: "https://i.imgur.com/rx97zAU.png")
 LeftArm.create(name: "Tiger", url: "https://i.imgur.com/U0EnSeX.png")
-LeftArm.create(name: "Wrestler", url: "https://i.imgur.com/EnQau9g.png")
+LeftArm.create(name: "Luchador", url: "https://i.imgur.com/EnQau9g.png")
 LeftArm.create(name: "Guy", url: "https://i.imgur.com/2VorliF.png")
 
 
@@ -34,7 +34,7 @@ RightArm.create(name: "Green", url: "https://i.imgur.com/oq9Uq6s.png")
 RightArm.create(name: "Red", url: "https://i.imgur.com/24wu4Sk.png")
 RightArm.create(name: "Tentacle", url: "https://i.imgur.com/J1yxfNX.png")
 RightArm.create(name: "Tiger", url: "https://i.imgur.com/z2SwhkF.png")
-RightArm.create(name: "Wrestler", url: "https://i.imgur.com/n45Iqlx.png")
+RightArm.create(name: "Luchador", url: "https://i.imgur.com/n45Iqlx.png")
 RightArm.create(name: "Guy", url: "https://i.imgur.com/wmknfVL.png")
 
 
